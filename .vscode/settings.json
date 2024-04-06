@@ -1,0 +1,12 @@
+{
+    "C_Cpp.errorSquiggles": "enabledIfIncludesResolve",
+    "files.associations": {
+        "iostream": "cpp",
+        "cmath": "cpp",
+        "ostream": "cpp",
+        "chrono": "cpp",
+        "string": "cpp"
+    },
+    "cph.general.onceMaintainerMessage": false,
+    "cph.general.saveLocation": ""
+}
