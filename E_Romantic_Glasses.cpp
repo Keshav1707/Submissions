@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+#define ll long long
+#define di(x) \
+    ll x;     \
+    cin >> x
+#define vecll vector<ll>
+#define pb push_back
+#define po pop_back
+#define all(x) x.begin(), x.end()
+#define el << endl;
+#define PI 3.14159265359
+#define MOD int(1e9 + 7)
+typedef pair<ll, ll> pairs;
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+vector<ll> adj[4004];
+void solve()
+{
+    di(x);
+    int sum = 0;
+    map<int, int> m;
+    bool f = 0;
+    for (ll i = 1; i <= x; i++)
+    {
+        di(n);
+        if (i % 2 == 0)
+            sum += n;
+        else
+            sum -= n;
+        m[sum]++;
+        if (m[sum] == 2 || sum == 0)
+            f = 1;
+    }
+
+    if (f)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
+}
+signed main()
+{
+    ll t = 1;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+    return 0;
+}

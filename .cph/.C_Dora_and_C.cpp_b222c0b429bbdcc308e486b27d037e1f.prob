@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+#define ll long long
+#define di(x) \
+    ll x;     \
+    cin >> x
+#define vecll vector<ll>
+#define sz(x) ((int)(x).size())
+#define pb push_back
+#define po pop_back
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+#define endl "\n"
+#define PI 3.14159265359
+typedef pair<ll, ll> pairs;
+typedef priority_queue<int, vector<int>, greater<int>> minheap;
+typedef priority_queue<int> maxheap;
+const int MOD = 1e9 + 7;
+class DisjointSet
+{
+    vector<int> rank, parent;
+
+public:
+    DisjointSet(int n)
+    {
+        rank.resize(n + 1, 0);
+        parent.resize(n + 1);
+        for (int i = 0; i <= n; i++)
+        {
+            parent[i] = i;
+        }
+    }
+
+    int findUPar(int node)
+    {
+        if (node == parent[node])
+            return node;
+        return parent[node] = findUPar(parent[no
